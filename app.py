@@ -6,8 +6,8 @@ import os
 my_app = Flask(__name__)
 
 base_file = os.path.abspath(os.path.dirname(__file__))
-my_app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(base_file, "app.sqlite")
-# my_app.config["SQLALCHEMY_DATABASE_URI"] = 'postgres://uhnpqdclftwqci:eab49280c1d528eb1429cc0de8abeec33515e12e7ccf383885c4954bae558987@ec2-52-200-119-0.compute-1.amazonaws.com:5432/d1d762oi0jc1qm'
+# my_app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(base_file, "app.sqlite")
+my_app.config["SQLALCHEMY_DATABASE_URI"] = 'postgres://dkcbankngoslgd:2f3dea0e6016e7aeeefcdb8769186f0748ff7e02d610606961c9c359a100f969@ec2-3-229-166-245.compute-1.amazonaws.com:5432/dfinjn3hf3e4d6'
 
 db = SQLAlchemy(my_app)
 marsh = Marshmallow(my_app)
