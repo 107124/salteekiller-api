@@ -3,11 +3,14 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 import os
 
+from flask_heroku import Heroku
+# import psycopg2
+
 my_app = Flask(__name__)
 
 base_file = os.path.abspath(os.path.dirname(__file__))
-# my_app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(base_file, "app.sqlite")
-my_app.config["SQLALCHEMY_DATABASE_URI"] = 'postgres://dkcbankngoslgd:2f3dea0e6016e7aeeefcdb8769186f0748ff7e02d610606961c9c359a100f969@ec2-3-229-166-245.compute-1.amazonaws.com:5432/dfinjn3hf3e4d6'
+my_app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(base_file, "app.sqlite")
+# my_app.config["SQLALCHEMY_DATABASE_URI"] = 'postgres://dkcbankngoslgd:2f3dea0e6016e7aeeefcdb8769186f0748ff7e02d610606961c9c359a100f969@ec2-3-229-166-245.compute-1.amazonaws.com:5432/dfinjn3hf3e4d6'
 
 db = SQLAlchemy(my_app)
 marsh = Marshmallow(my_app)
